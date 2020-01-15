@@ -98,4 +98,8 @@ class SiteController extends Controller
 
         return $this->goHome();
     }
+
+    public function verifyEmail($token) {
+      
+    }
 }

@@ -58,7 +58,21 @@ class User extends ActiveRecord implements IdentityInterface
         ];
     }
 
-    /**
+    public function attributeLabels()
+    {
+      return [
+        'username' => 'Имя пользователя',
+        'created_at' => 'Создан',
+        'updated_at' => 'Обновлён',
+        'status' => 'Статус',
+        'password_reset_token' => 'Токен сброса пароля',
+        'verification_token' => 'Токен верификации',
+        'auth_key' => 'Ключ авторизации',
+      ];
+
+    }
+
+  /**
      * {@inheritdoc}
      */
     public static function findIdentity($id)
